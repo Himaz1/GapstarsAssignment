@@ -1,0 +1,7 @@
+package com.gapstar.testcases;
+
+import com.gapstar.base.TestBase;
+
+public class LandingPageTest extends TestBase{
+
+}

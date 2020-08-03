@@ -1,0 +1,46 @@
+package com.gapstar.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.gapstar.base.TestBase;
+import com.gapstar.pages.LandingPage;
+
+public class LandingPageTest extends TestBase{
+	
+	public LandingPage landingPage;
+	
+	
+	public LandingPageTest()
+	{
+		super();
+	}
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		initialization();
+		landingPage = new LandingPage();
+		
+	}
+	
+	@Test(priority=1)
+	public void landingPageTitleTest()
+	{
+		String title = landingPage.validateLoginPageTitle();
+		Assert.assertEquals(title, "Collaborative Photo Book | Shared Photo Albums - Printed • PastBook", "Title Not Matched");
+		
+		landingPage.clickLeftMenuIcon();
+	}
+	
+		
+		
+	@AfterMethod
+	public void cleanUp()
+	{
+		driver.quit();
+	}
+
+}

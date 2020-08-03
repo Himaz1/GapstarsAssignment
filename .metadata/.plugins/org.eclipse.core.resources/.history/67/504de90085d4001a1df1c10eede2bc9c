@@ -1,0 +1,54 @@
+package com.gapstar.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.gapstar.base.TestBase;
+
+public class LandingPage extends TestBase{
+	
+	@FindBy (xpath="//span[@class='icon-hamburger-animated']")
+	WebElement ele_leftMenu;
+	
+	@FindBy(xpath = "//a[@class='icon-user' and @href='/signin/?signin_redirect=/last/']")
+	WebElement lnk_signIn;
+	
+	
+	
+	
+	
+	
+	public LandingPage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	public String validateLoginPageTitle()
+	{
+		return driver.getTitle();
+	}
+	
+		
+	public void clickLeftMenuIcon()
+	{
+		ele_leftMenu.click();
+	}
+	
+	public void clickSignInLink()
+	{
+		lnk_signIn.click();
+	}
+	
+	public void handleWindow()
+	{
+		String handle = driver.getWindowHandle();
+		System.out.println("Parent window's handle -> " + handle);
+		WebElement clickEmail = driver.findElement(By.xpath("//a[@class='btn btn-link' and contains(text(),'or use email')]"));
+		clickEmail.click();
+	}
+	
+	
+	
+}

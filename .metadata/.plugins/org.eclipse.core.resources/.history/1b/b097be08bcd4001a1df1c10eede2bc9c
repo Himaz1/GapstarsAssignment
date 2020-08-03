@@ -1,0 +1,73 @@
+package com.gapstar.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.gapstar.base.TestBase;
+import com.gapstar.pages.LandingPage;
+
+public class LandingPageTest extends TestBase{
+	
+	public LandingPage landingPage;
+	
+	
+	public LandingPageTest()
+	{
+		super();
+	}
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		initialization();
+		landingPage = new LandingPage();
+		
+	}
+	
+	@Test(priority=1)
+	public void verifyUserRegistrationAndCreatePastBook() throws Exception
+	{
+		String title = landingPage.getLandingPageTitle();
+		Assert.assertEquals(title, "Collaborative Photo Book | Shared Photo Albums - Printed • PastBook", "Title Not Matched");
+		
+		landingPage.clickLeftMenuIcon();
+		Thread.sleep(2000);
+		landingPage.clickSignInLink();
+		Thread.sleep(3000);
+		landingPage.handleWindowDuringRegistration();
+		landingPage.clickLeftMenuIcon();
+		landingPage.clickSignOutLink();
+		Thread.sleep(3000);
+		//landingPage.clickLeftMenuIcon();
+		//Thread.sleep(2000);
+		//landingPage.clickSignInLink();
+		//landingPage.handleWindowDuringLogIn();
+	}
+	
+	@Test(priority=2)
+	public void verifyUserLoginWithPreviousCredentials() throws Exception
+	{
+		String title = landingPage.getLandingPageTitle();
+		Assert.assertEquals(title, "Collaborative Photo Book | Shared Photo Albums - Printed • PastBook", "Title Not Matched");
+		
+		landingPage.clickLeftMenuIcon();
+		Thread.sleep(2000);
+		landingPage.clickSignInLink();
+		Thread.sleep(3000);
+		landingPage.handleWindowDuringLogIn();
+		
+		String title1 = landingPage.getPageTitleFterLogIn();
+		Assert.assertEquals(title1, "Collaborative Photo Book | Shared Photo Albums - Printed • PastBook", "Title Not Matched");
+	}
+	
+		
+		
+	/*@AfterMethod
+	public void cleanUp()
+	{
+		driver.quit();
+	}*/
+
+}

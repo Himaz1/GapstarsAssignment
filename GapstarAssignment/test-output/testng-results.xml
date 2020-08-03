@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="154126" started-at="2020-08-03T08:34:30Z" finished-at="2020-08-03T08:37:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="154126" started-at="2020-08-03T08:34:30Z" finished-at="2020-08-03T08:37:04Z">
+      <class name="com.gapstar.testcases.LandingPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="setUp" is-config="true" duration-ms="12759" started-at="2020-08-03T14:04:30Z" finished-at="2020-08-03T14:04:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyUserRegistrationAndCreatePastBook()[pri:1, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="verifyUserRegistrationAndCreatePastBook" duration-ms="85569" started-at="2020-08-03T14:04:43Z" finished-at="2020-08-03T14:06:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserRegistrationAndCreatePastBook -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="cleanUp" is-config="true" duration-ms="13714" started-at="2020-08-03T14:06:08Z" finished-at="2020-08-03T14:06:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="setUp" is-config="true" duration-ms="14550" started-at="2020-08-03T14:06:22Z" finished-at="2020-08-03T14:06:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyUserLoginWithPreviousCredentials()[pri:2, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="verifyUserLoginWithPreviousCredentials" duration-ms="26526" started-at="2020-08-03T14:06:37Z" finished-at="2020-08-03T14:07:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithPreviousCredentials -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.gapstar.testcases.LandingPageTest@5419f379]" name="cleanUp" is-config="true" duration-ms="971" started-at="2020-08-03T14:07:03Z" finished-at="2020-08-03T14:07:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.gapstar.testcases.LandingPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

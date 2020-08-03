@@ -1,0 +1,57 @@
+package com.gapstar.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.gapstar.base.TestBase;
+import com.gapstar.pages.LandingPage;
+
+public class LandingPageTest extends TestBase{
+	
+	public LandingPage landingPage;
+	
+	
+	public LandingPageTest()
+	{
+		super();
+	}
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		initialization();
+		landingPage = new LandingPage();
+		
+	}
+	
+	/*@Test(priority=1)
+	public void loginPageTitleTest()
+	{
+		String title = loginPage.validateLoginPageTitle();
+		Assert.assertEquals(title, "", "Title Not Matched");
+	}*/
+	
+	/*@Test(priority=2)
+	public void verifyValidLogin() throws Exception
+	{
+		loginPage.login("", "");
+		utilPage.escape();
+		Assert.assertEquals(commonPage.getOnlineStoreLinkText(), "ONLINE STORE", "Online Store link text not found");
+										
+	}
+	
+	@Test(priority=3)
+	public void verifyInValidLogin() throws Exception
+	{
+		loginPage.login("", "");
+		Assert.assertTrue(loginPage.verifyInvalidLoginErrorMessage(), "Invalid login verification failed");
+	}*/
+	
+	@AfterMethod
+	public void cleanUp()
+	{
+		driver.quit();
+	}
+
+}
