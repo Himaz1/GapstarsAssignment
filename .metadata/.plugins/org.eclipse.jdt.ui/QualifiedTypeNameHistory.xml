@@ -17,10 +17,13 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-<fullyQualifiedTypeName name="com.gapstar.base.TestBase"/>
 <fullyQualifiedTypeName name="com.gapstar.pages.LandingPage"/>
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="com.gapstar.base.TestBase"/>
+<fullyQualifiedTypeName name="com.gapstar.util.TestUtil"/>
+<fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+<fullyQualifiedTypeName name="com.gapstar.lib.ExcelDataConfig"/>
 </qualifiedTypeNameHistroy>
